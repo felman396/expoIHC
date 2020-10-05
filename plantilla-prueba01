@@ -1,0 +1,225 @@
+\documentclass[11pt]{beamer}
+\usepackage{listings} % Include the listings-package
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb, amsfonts, latexsym, cancel}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{subfigure}
+\usepackage{hyperref}
+%\usepackage{authblk}
+\usepackage{blindtext}
+\usepackage{booktabs} % Allows the use of \toprule, 
+\usepackage{filecontents}
+\usepackage{courier} %% Sets font for listing as Courier.
+\usepackage{listings}
+%\usepackage{listings, xcolor}
+\lstset{
+    tabsize = 2, %% set tab space width
+showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+numbers = left, %% display line numbers on the left
+commentstyle = \color{green}, %% set comment color
+keywordstyle = \color{blue}, %% set keyword color
+stringstyle = \color{red}, %% set string color
+rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+basicstyle = \small \ttfamily , %% set listing font and size
+breaklines = true, %% enable line breaking
+numberstyle = \tiny,
+}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\definecolor{urlColor}{rgb}{0.06, 0.3, 0.57}
+\definecolor{linkColor}{rgb}{0.57, 0.0, 0.04}
+\definecolor{fileColor}{rgb}{0.0, 0.26, 0.26}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkColor,
+    filecolor=fileColor,      
+    urlcolor=urlColor,
+}
+\urlstyle{same}
+\setbeamercovered{transparent}
+%\usetheme{Boadilla}
+\usetheme{CambridgeUS}
+%\usetheme{Berkeley}
+%\usetheme{Warsaw}
+%\usetheme{Madrid}
+
+\title[Introducción]{\bf\Huge Pautas de diseño de la interfaz de usuario}
+\subtitle{Interacción Humano Computador}
+
+\author[rescobedoq]
+{
+	Richart Smith Escobedo Quispe \inst{1}
+}
+\institute[UNSA]
+{
+\inst{1}% 
+System Engineering School\\
+System Engineering and Informatic Department\\
+Production and Services Faculty\\
+San Agustin National University of Arequipa
+}
+
+\date[2020-09-09]{\scriptsize{2020-09-09}}
+%\logo{\includegraphics[width=3.0cm]{img/logo_unsa.jpg}}
+\titlegraphic{\includegraphics[width=1.0cm]{img/logo_unsa.jpg}}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Content}
+\tableofcontents
+\end{frame}
+
+\section{Pautas de diseño de la interfaz de usuario}
+\begin{frame}
+\frametitle{Pautas de diseño de la interfaz de usuario}
+\begin{itemize}
+\item Sistemas informáticos interactivos
+\item Pautas de diseño de la interfaz de usuario. (Reglas de diseño):
+\item Cheriton (1976) - Tiempo compartido.
+\item Norman (1983) - Cognición humana.
+\item {\bf Smith y Mosier (1986).}
+\item Shneiderman (1987) - Ocho reglas de oro.
+\item Brown (1988).
+\item Nielsen y Molich (1990) - Evaluación heurística.
+\item Nielsen y Mack (1994).
+\item Stone et al. (2005).
+\item Koyani y col. (2006).
+\item Johnson (2007).
+\item Shneiderman y Plaisant (2009).
+\item Microsoft, Apple Computer y Oracle - 2009, 2009, 2001
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Directrices}
+\framesubtitle{Controles}
+Son elementos de la interfaz de usuario con los que interactúan los usuarios en el área de la ventana principal de la aplicación.
+\begin{figure}
+ \centering
+  \subfloat{
+   \label{f:barras}
+    \includegraphics[width=3cm,height=1cm\textwidth]{barras.png}}
+  \subfloat{
+   \label{f:botones}
+    \includegraphics[width=3cm, height=1.5cm\textwidth]{botones.png}}
+  \subfloat{
+   \label{f:casillas}
+    \includegraphics[width=1.5cm, height=2.5cm\textwidth]{casillas.png}}
+  \subfloat{
+   \label{f:cuadroTexto}
+    \includegraphics[width=3cm, height=1cm\textwidth]{cuadroTexto.png}}
+  \subfloat{
+   \label{f:listas}
+    \includegraphics[width=1cm, height=2.5cm\textwidth]{listas.png}}
+  \subfloat{
+   \label{f:notificaciones}
+    \includegraphics[width=3cm, height=1cm\textwidth]{notificaciones.png}}
+ \caption{Algunos controles}
+ \label{f:controles}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Directrices}
+\framesubtitle{Comandos}
+Son acciones que los usuarios pueden realizar mientras usan su aplicación.
+\begin{figure}
+ \centering
+  \subfloat{
+   \label{f:barraHerramientas}
+    \includegraphics[width=4cm,height=2cm\textwidth]{barraHerramientas.png}}
+  \subfloat{
+   \label{f:cintas}
+    \includegraphics[width=4cm, height=2.5cm\textwidth]{cintas.png}}
+  \subfloat{
+   \label{f:menu}
+    \includegraphics[width=4cm, height=4cm\textwidth]{menu.png}}
+ \caption{Comandos}
+ \label{f:controles}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Directrices}
+\framesubtitle{Texto}
+Incluye cualquier texto que los usuarios puedan ver en su aplicación. 
+\begin{figure}
+ \centering
+  \subfloat{
+   \label{f:texto}
+    \includegraphics[width=4cm,height=2cm\textwidth]{texto.png}}
+    \caption{Texto de la interfaz de usuario}
+  \subfloat{
+   \label{f:estiloTono}
+    \includegraphics[width=4cm, height=2.5cm\textwidth]{estiloTono.png}}
+    \caption{Estilo y tono}
+ \label{f:controles}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Microsoft}
+\framesubtitle{Directrices - Pautas sobre la experiencia del usuario} 
+
+  4) Mensajes.
+\begin{itemize}
+\item Son necesarios para que usuario pueda guiarse mejor en la interfaz o aplicación.
+\item Tales como: mensajes de errores, advertencias, notificaciones y/o confirmaciones.
+
+\end{itemize}
+\begin{figure}
+    {\includegraphics[width=4.0cm]{mensajes.jpg}}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Microsoft}
+\framesubtitle{Directrices - Pautas sobre la experiencia del usuario} 
+  5) Interacción.
+\begin{itemize}
+\item Las diferentes formas por las cuales el usuario interactua con la aplicación o interfaz. Estas generan experiencias intuitivas.
+\item Tales como: el tacto, el teclado, el mouse, entre otros.
+
+\end{itemize}
+\begin{figure}
+    {\includegraphics[width=4.0cm]{interacción.png}}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Microsoft}
+\framesubtitle{Directrices - Pautas sobre la experiencia del usuario} 
+
+  6) Ventanas.
+\begin{itemize}
+\item Superficies de la interfaz del usuario, tales como ventanas principales, ventanas emergentes, cuadros de diálogo y los asistentes.
+\item Debemos tener en cuenta: cuándo debemos de usarlo y de qué manera lo usaremos.
+
+\end{itemize}
+\begin{figure}
+    {\includegraphics[width=4.0cm]{Ventanas.png}}
+\end{figure}
+\end{frame}
+
+\section{References}
+%References frame
+\begin{frame}
+\frametitle{References}
+\begin{itemize}
+\item Introduction - xiii, Jhonson J. (2014). Designing with the Mind in mind. 2nd. edition.
+\end{itemize}
+\end{frame}
+
+\end{document}
